@@ -1,21 +1,21 @@
 var canvas = document.createElement("canvas");
-var width = canvas.width = window.innerWidth * 0.75;
-var height = canvas.height = window.innerHeight * 0.75; 
+var width = canvas.width = window.innerWidth * 0.60;
+var height = canvas.height = window.innerHeight * 0.60; 
 document.body.appendChild(canvas);
 var gl = canvas.getContext('webgl');
 
 var mouse = { x: 0, y: 0 };
 
-var numMetaballs = 30;
+var numMetaballs = 40; // hoeveelheid 
 var metaballs = [];
 
 for (var i = 0; i < numMetaballs; i++) {
-    var radius = Math.random() * 60 + 10;
+    var radius = Math.random() * 80; 
     metaballs.push({
-        x: Math.random() * (width - 2 * radius) + radius,
-        y: Math.random() * (height - 2 * radius) + radius,
-        vx: (Math.random() - 0.5) * 1,
-        vy: (Math.random() - 0.5) * 1,
+        x: Math.random() * (width - 5 * radius) + radius,
+        y: Math.random() * (height - 5 * radius) + radius,
+        vx: (Math.random() - 0.002) * 0.5,
+        vy: (Math.random() - 0.002) * 0.5, // speed
         r: radius * 1
     });
 }

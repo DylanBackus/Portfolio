@@ -45,12 +45,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
-  box-shadow: #000 10px, 10px, 10px;
+  height: 100%; /* Zorgt ervoor dat de container de volledige sectiehoogte inneemt */
+  position: relative;
 }
 
 .main-title {
@@ -137,16 +134,24 @@ nav {
 }
 
 /* Sections */
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Verticaal centreren */
+  align-items: center; /* Horizontaal centreren */
+  height: 97vh; /* Neemt de volledige hoogte van het scherm in */
+  position: relative;
+}
+
 .section2 {
-  margin-top: 800px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 650px;
+  height: auto; /* Hoogte wordt bepaald door de inhoud */
   width: 100%;
-  background-color: #0000;
-  /* red */
+  background-color: red; /* Alleen voor visuele indicatie */
+  margin-top: 0; /* Geen vaste marge meer nodig */
 }
 
 .section3 {
@@ -157,7 +162,7 @@ nav {
   align-items: center;
   height: 700px;
   width: 100%;
-  background-color: #0000;
+  background-color: blue;
   /* red */
 }
 
