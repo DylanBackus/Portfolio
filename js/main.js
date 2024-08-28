@@ -14,8 +14,8 @@ for (var i = 0; i < numMetaballs; i++) {
     metaballs.push({
         x: Math.random() * (width - 5 * radius) + radius,
         y: Math.random() * (height - 5 * radius) + radius,
-        vx: (Math.random() - 0.002) * 0.5,
-        vy: (Math.random() - 0.002) * 0.5, // speed
+        vx: (Math.random() - 0.002) * 0.2,
+        vy: (Math.random() - 0.002) * 0.2, // speed
         r: radius * 1
     });
 }
