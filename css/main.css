@@ -19,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 3000px;
-  scroll-behavior: smooth;
 }
 
 /* scrollbarr */
@@ -137,17 +136,7 @@ nav {
 /* Sections */
 section {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
-  background-color: lightgray;
   scroll-snap-align: start;
-  transition: transform 1s ease; /* Voegt een overgangstijd toe aan de scroll */
-}
-
-section:nth-child(odd) {
-  background-color: lightblue;
 }
 
 .section1 {
@@ -323,6 +312,24 @@ section:nth-child(odd) {
 }
 
 /*about*/
+.about-me-text-2{
+  color: #FFF;
+  font-family: "Kanit";
+  font-size: 60px;
+  line-height:1em;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  
+  @include text3d(
+    adjust-color($primarycolour, $lightness: -8%), 
+    $depth: 8, 
+    $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
+    $shadowopacity: .3);
+}
 .flip-card {
   background-color: transparent;
   width: 1000px;
