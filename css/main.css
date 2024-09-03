@@ -21,7 +21,7 @@ body {
   height: 3000px;
 }
 
-/* scrollbar */
+/* scrollbarr */
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -45,12 +45,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
-  box-shadow: #000 10px, 10px, 10px;
+  height: 100%; /* Zorgt ervoor dat de container de volledige sectiehoogte inneemt */
+  position: relative;
 }
 
 .main-title {
@@ -70,7 +67,7 @@ canvas {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 
 nav {
@@ -137,16 +134,30 @@ nav {
 }
 
 /* Sections */
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Verticaal centreren */
+  align-items: center; /* Horizontaal centreren */
+  height: 100vh; /* Neemt de volledige hoogte van het scherm in */
+  position: relative;
+  background-color: #000;
+}
+
 .section2 {
-  margin-top: 800px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 650px;
+  height: 900px; /* Hoogte wordt bepaald door de inhoud */
   width: 100%;
-  background-color: #0000;
-  /* red */
+  background-color: red; /* Alleen voor visuele indicatie */
+  margin-top: 0; /* Geen vaste marge meer nodig */
 }
 
 .section3 {
@@ -157,7 +168,7 @@ nav {
   align-items: center;
   height: 700px;
   width: 100%;
-  background-color: #0000;
+  background-color: blue;
   /* red */
 }
 
@@ -173,6 +184,25 @@ nav {
 }
 
 /* scroll shit */
+
+.item {
+  opacity: 0;
+  position: absolute;
+  transition: opacity .25s ease-in-out; /* Verlengde fade-transitie van 1 seconde */
+}
+
+.item.active {
+  opacity: 1;
+  position: relative;
+}
+
+.item.fade-in {
+  opacity: 1;
+}
+
+.item.fade-out {
+  opacity: 0;
+}
 
 .carousel-container {
   width: 80%;
@@ -197,6 +227,7 @@ nav {
   display: none;
   transition: opacity 0.5s ease-in-out;
 }
+
 
 .carousel-container .carousel .item img {
   width: 100%;
@@ -281,48 +312,71 @@ nav {
 }
 
 /*about*/
-.about-container {
-  display: flex;
-  flex-direction: row;
-  width: 1000px;
-  height: 450px;
-  background-color: #000000;
-  position: relative;
-}
-
-.about-container:after {
-  content: "";
+.about-me-text-2{
+  color: #FFF;
+  font-family: "Kanit";
+  font-size: 60px;
+  line-height:1em;
+  margin: 0;
   position: absolute;
-  inset: -.625em;
-  background: linear-gradient(to bottom right,
-      rgb(191, 0, 255), rgb(00, 255, 238));
-  filter: blur(2.5em);
-  z-index: -1;
-}
-
-.about-image {
-  height: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
+  
+  @include text3d(
+    adjust-color($primarycolour, $lightness: -8%), 
+    $depth: 8, 
+    $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
+    $shadowopacity: .3);
+}
+.flip-card {
+  background-color: transparent;
+  width: 1000px;
+  height: 600px;
+  perspective: 1000px;
 }
 
-.about-conatainer-right {
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background-color: #0000;
+  align-items: center;
+
+  background-color: #bbb;
+  color: white;
 }
 
-.about-main-text {
-  letter-spacing: 10px;
-  font-size: 100px;
-  margin-left: -300px;
-  color: white;
+.about-me-main-text{
+  margin-top: 25px;
+
+  font-size: 75px;
   position: absolute;
 }
 
-.about-second-text-container {
-  height: 100%;
-  width: 100%;
-  background-color: #0000;
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
 }
