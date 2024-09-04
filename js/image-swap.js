@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     dots[idx].classList.add("active");
                 }
             });
-        }, 500); // Dit is de duur van de fade-out, gelijk aan de helft van de overgangstijd
+        }, 500); // Duur van de transition
     }
 
     function nextItem() {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startAutoSwap() {
-        autoSwap = setInterval(nextItem, 3000);
+        autoSwap = setInterval(nextItem, 2500);
     }
 
     function stopAutoSwap() {
