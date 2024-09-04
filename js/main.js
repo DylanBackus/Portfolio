@@ -6,17 +6,17 @@ var gl = canvas.getContext('webgl');
 
 var mouse = { x: 0, y: 0 };
 
-var numMetaballs = 3; // hoeveelheid 
+var numMetaballs = 40; // hoeveelheid 
 var metaballs = [];
 
 for (var i = 0; i < numMetaballs; i++) {
     var radius = Math.random() * 80; 
     metaballs.push({
-        x: Math.random() * (width - 5 * radius) + radius,
-        y: Math.random() * (height - 5 * radius) + radius,
-        vx: (Math.random() - 0.002) * 1,
-        vy: (Math.random() - 0.002) * 1, // speed
-        r: radius * 1
+        x: Math.random() * (width - 10 * radius) + radius,
+        y: Math.random() * (height - 10 * radius) + radius,
+        vx: (Math.random() - 0.002) * 1.2,
+        vy: (Math.random() - 0.002) * 1.2, // speed
+        r: radius * .9
     });
 }
 

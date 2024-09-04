@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     dots[idx].classList.add("active");
                 }
             });
-        }, 500); // Duur van de transition
+        }, 5); // Duur van de transition
     }
 
     function nextItem() {
