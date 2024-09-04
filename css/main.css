@@ -1,382 +1,386 @@
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 ::selection {
-  background-color: #8dedff;
+    background-color: #8dedff;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Alatsi', sans-serif;
-  margin: 0px;
-  background: black;
-  display: flex;
-  flex-direction: column;
-  height: 3000px;
+    font-family: 'Alatsi', sans-serif;
+    margin: 0px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    height: 3000px;
 }
 
 /* scrollbarr */
 
 ::-webkit-scrollbar {
-  width: 12px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 15px;
-  background: #888;
+    border-radius: 15px;
+    background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to top, #b5e5ff 10%, #f4bfff 100%);
+    background: linear-gradient(to top, #b5e5ff 10%, #f4bfff 100%);
 }
 
 ::-webkit-scrollbar-track {
-  background: #333;
+    background: #333;
 }
 
 /* text main */
 .container-metaballs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%; /* Zorgt ervoor dat de container de volledige sectiehoogte inneemt */
-  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* Zorgt ervoor dat de container de volledige sectiehoogte inneemt */
+    position: relative;
 }
 
 .main-title {
-  mix-blend-mode: overlay;
-  z-index: 2;
-  opacity: 100%;
-  font-size: 25vw;
-  color: white;
+    mix-blend-mode: overlay;
+    z-index: 2;
+    opacity: 100%;
+    font-size: 25vw;
+    color: white;
 }
 
 canvas {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 nav {
-  position: fixed;
-  z-index: 2;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 30px;
-  background-color: rgba(69, 69, 69, 0.0);
-  top: 0;
-  background-color: #0000;
-  left: 0;
+    position: fixed;
+    z-index: 2;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(69, 69, 69, 0.0);
+    top: 0;
+    background-color: #0000;
+    left: 0;
 }
 
 .nav-item {
-  background-color: #0000;
-  position: relative;
+    background-color: #0000;
+    position: relative;
 }
 
 .navigatie-container {
-  display: flex;
-  flex-direction: row;
-  background-color: #0000;
-  justify-content: space-around;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #0000;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
 }
 
 .nav-item a {
-  text-decoration: none;
-  list-style-type: none;
-  opacity: 100%;
-  color: white;
-  font-size: 25px;
-  font-family: sans-serif;
-  font-weight: 100;
+    text-decoration: none;
+    list-style-type: none;
+    opacity: 100%;
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 100;
 }
 
 .nav-item a:hover {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .nav-contact-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 350px;
-  height: 150%;
-  background-color: #0000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+    height: 150%;
+    background-color: #0000;
 }
 
 .nav-contact-logo {
-  width: 50px;
-  height: 100%;
-  background-color: #0000;
+    width: 50px;
+    height: 100%;
+    background-color: #0000;
 }
 
 .nav-logo-image {
-  height: 100%;
+    height: 100%;
 }
 
 /* Sections */
 section {
-  height: 100vh;
-  scroll-snap-align: start;
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 .section1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Verticaal centreren */
-  align-items: center; /* Horizontaal centreren */
-  height: 100vh; /* Neemt de volledige hoogte van het scherm in */
-  position: relative;
-  background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Verticaal centreren */
+    align-items: center;
+    /* Horizontaal centreren */
+    height: 100vh;
+    /* Neemt de volledige hoogte van het scherm in */
+    position: relative;
+    background-color: #000;
 }
 
 .section2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 900px; /* Hoogte wordt bepaald door de inhoud */
-  width: 100%;
-  background-color: red; /* Alleen voor visuele indicatie */
-  margin-top: 0; /* Geen vaste marge meer nodig */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 900px;
+    /* Hoogte wordt bepaald door de inhoud */
+    width: 100%;
+    background-color: red;
+    /* Alleen voor visuele indicatie */
+    margin-top: 0;
+    /* Geen vaste marge meer nodig */
 }
 
 .section3 {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 700px;
-  width: 100%;
-  background-color: blue;
-  /* red */
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    width: 100%;
+    background-color: blue;
+    /* red */
 }
 
 /* foto shit */
 
 .foto-container {
-  display: flex;
-  flex-direction: row;
-  background: #0000;
-  /* magenta */
-  height: 700px;
-  width: 80%;
+    display: flex;
+    flex-direction: row;
+    background: #0000;
+    /* magenta */
+    height: 700px;
+    width: 80%;
 }
 
 /* scroll shit */
 
 .item {
-  opacity: 0;
-  position: absolute;
-  transition: opacity .25s ease-in-out; /* Verlengde fade-transitie van 1 seconde */
+    opacity: 0;
+    position: absolute;
+    transition: opacity .25s ease-in-out;
+    /* Verlengde fade-transitie van 1 seconde */
 }
 
 .item.active {
-  opacity: 1;
-  position: relative;
+    opacity: 1;
+    position: relative;
 }
 
 .item.fade-in {
-  opacity: 1;
+    opacity: 1;
 }
 
 .item.fade-out {
-  opacity: 0;
+    opacity: 0;
 }
 
 .carousel-container {
-  width: 80%;
-  margin: auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--lx-gap);
+    width: 80%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--lx-gap);
 }
 
 .carousel-container .carousel {
-  aspect-ratio: 1.7777777778;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+    aspect-ratio: 1.7777777778;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .carousel-container .carousel .item {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
 }
 
 
 .carousel-container .carousel .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .carousel-container .carousel .item .caption {
-  width: 100%;
-  padding: var(--lx-space-01);
-  position: absolute;
-  bottom: 0;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 17px;
-  color: white;
+    width: 100%;
+    padding: var(--lx-space-01);
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 17px;
+    color: white;
 }
 
 .carousel-container .carousel .item.active {
-  opacity: 1;
-  display: block;
+    opacity: 1;
+    display: block;
 }
 
 .carousel-container .btn {
-  padding: 1em 2em;
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
-  background-image: linear-gradient(to right, #5615ff 10%, #f6a3ff 100%);
-  background-color: #ffffe6;
-  transition: transform 0.2s ease-in-out;
+    padding: 1em 2em;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #5615ff 10%, #f6a3ff 100%);
+    background-color: #ffffe6;
+    transition: transform 0.2s ease-in-out;
 }
 
 .carousel-container .btn:hover {
-  background-position: right center;
-  color: #000;
-  text-decoration: none;
+    background-position: right center;
+    color: #000;
+    text-decoration: none;
 }
 
 .carousel-container .btn:active,
 .carousel-container .btn:focus {
-  transform: translateY(-50%) scale(0.9);
+    transform: translateY(-50%) scale(0.9);
 }
 
 .carousel-container .btn:hover {
-  transform: translateY(-50%) scale(0.96);
+    transform: translateY(-50%) scale(0.96);
 }
 
 .carousel-container .prev {
-  left: -5%;
+    left: -5%;
 }
 
 .carousel-container .next {
-  right: -5%;
+    right: -5%;
 }
 
 .carousel-container .dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .carousel-container .dots .dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  background-color: #242421;
-  transition: background-color 0.2s ease;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    background-color: #242421;
+    transition: background-color 0.2s ease;
 }
 
 .carousel-container .dots .dot.active,
 .carousel-container .dots .dot:hover {
-  background-color: #ffffe6;
+    background-color: #ffffe6;
 }
 
 /*about*/
-.about-me-text-2{
-  color: #FFF;
-  font-family: "Kanit";
-  font-size: 60px;
-  line-height:1em;
-  margin: 0;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  
-  @include text3d(
-    adjust-color($primarycolour, $lightness: -8%), 
-    $depth: 8, 
-    $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
-    $shadowopacity: .3);
+.about-me-text-2 {
+    color: #FFF;
+    font-family: "Kanit";
+    font-size: 60px;
+    line-height: 1em;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 }
+
 .flip-card {
-  background-color: transparent;
-  width: 1000px;
-  height: 600px;
-  perspective: 1000px;
+    background-color: transparent;
+    width: 1000px;
+    height: 600px;
+    perspective: 1000px;
 }
 
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.9s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .flip-card-front {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  background-color: #bbb;
-  color: white;
+    background-color: #bbb;
+    color: white;
 }
 
-.about-me-main-text{
-  margin-top: 25px;
+.about-me-main-text {
+    margin-top: 25px;
 
-  font-size: 75px;
-  position: absolute;
+    font-size: 75px;
+    position: absolute;
 }
 
 .flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
 }
