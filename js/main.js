@@ -6,7 +6,7 @@ var gl = canvas.getContext('webgl');
 
 var mouse = { x: 0, y: 0 };
 
-var numMetaballs = 40; // hoeveelheid 
+var numMetaballs = 40;  
 var metaballs = [];
 
 for (var i = 0; i < numMetaballs; i++) {
@@ -15,7 +15,7 @@ for (var i = 0; i < numMetaballs; i++) {
         x: Math.random() * (width - 10 * radius) + radius,
         y: Math.random() * (height - 10 * radius) + radius,
         vx: (Math.random() - 0.002) * 1.2,
-        vy: (Math.random() - 0.002) * 1.2, // speed
+        vy: (Math.random() - 0.002) * 1.2, 
         r: radius * .9
     });
 }
@@ -127,7 +127,7 @@ function compileShader(shaderSource, shaderType) {
 
     return shader;
 }
-// 
+
 function getUniformLocation(program, name) {
     var uniformLocation = gl.getUniformLocation(program, name);
     if (uniformLocation === -1) {
