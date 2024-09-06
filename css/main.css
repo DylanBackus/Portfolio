@@ -138,11 +138,6 @@ nav {
 }
 
 /* Sections */
-section {
-    height: 100vh;
-    scroll-snap-align: start;
-}
-
 .section1 {
     display: flex;
     flex-direction: column;
@@ -157,17 +152,14 @@ section {
 }
 
 .section2 {
+    background-color: #b5b5b500;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 900px;
-    /* Hoogte wordt bepaald door de inhoud */
     width: 100%;
-    background-color: #000;
-    /* Alleen voor visuele indicatie */
-    margin-top: 0;
-    /* Geen vaste marge meer nodig */
 }
 
 .section3 {
