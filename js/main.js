@@ -14,9 +14,9 @@ for (var i = 0; i < numMetaballs; i++) {
   metaballs.push({
     x: Math.random() * (width - 10 * radius) + radius,
     y: Math.random() * (height - 10 * radius) + radius,
-    vx: (Math.random() - 0.002) * 1.2,
-    vy: (Math.random() - 0.002) * 1.2, //speed
-    r: radius * 0.9,
+    vx: (Math.random() - 1) * 0.4,
+    vy: (Math.random() - 1) * 0.7, //speed 1.2 for laptop // 
+    r: radius * 1.2,
   });
 }
 
@@ -24,7 +24,7 @@ var vertexShaderSrc = `
     attribute vec2 position;
     
     void main() {
-        gl_Position = vec4(position, 0.0, 1.0);
+        gl_Position = vec4(position, 1.0, 1.0);
     }
 `;
 
