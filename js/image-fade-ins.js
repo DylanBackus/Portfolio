@@ -1,26 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Selecteer de twee afbeeldingen
-    var pic1 = document.querySelector(".about-me-pic-1");
-    var pic2 = document.querySelector(".about-me-pic-2");
+    // Selecteer de afbeeldingen die ingefade moet worden
+    var images = document.querySelectorAll(".about-me-pic-1, .about-me-pic-2");
   
-    // Instellen van de IntersectionObserver
-    var observer = new IntersectionObserver(function (entries) {
+    // maken van IntersectionObserver
+    var observer = new IntersectionObserver(function (entries, observer) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          // Als het element in beeld is, voeg de fade-in klasse toe
-          if (entry.target === pic1) {
-            entry.target.classList.add('fade-in');
-          } else if (entry.target === pic2) {
-            entry.target.classList.add('fade-in');
-          }
+          // add de fade-in class toe wanneer de afbeelding in beeld komt
+          entry.target.classList.add('fade-in');
+        } else {
+          // Verwijder fade-in class als de afbeelding uit beeld is
+          entry.target.classList.remove('fade-in');
         }
       });
     }, {
-      threshold: 0.5 // Zorgt ervoor dat de fade-in gebeurt wanneer 50% van het element zichtbaar is
+      threshold: 0.5 // animatie begint wanneer 50% van de afbeelding zichtbaar is
     });
   
-    // Observeer de twee afbeeldingen
-    observer.observe(pic1);
-    observer.observe(pic2);
+    // start observer voor elke afbeelding
+    images.forEach(function (image) {
+      observer.observe(image);
+    });
   });
   

@@ -1,12 +1,11 @@
-// Functie om het fade-in effect toe te passen met IntersectionObserver
 document.addEventListener("DOMContentLoaded", function () {
   var aboutSection = document.querySelector(".about-me-second-text-container");
 
-  // Instellen van de IntersectionObserver
+  // maken van de IntersectionObserver
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        // Element is zichtbaar, fade-in toepassen
+        // Element is zichtbaar. fade-in toepassen
         aboutSection.style.transition = "opacity 1.5s ease-in-out";
         aboutSection.style.opacity = 1;
       } else {
@@ -16,9 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, {
-    threshold: 0.6 // Zorgt ervoor dat de fade-in gebeurt wanneer 20% van het element zichtbaar is
+    threshold: 0.6 //fade-in gebeurt wanneer 60% van het element zichtbaar is
   });
 
-  // Observer starten op het geselecteerde element
   observer.observe(aboutSection);
 });

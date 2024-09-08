@@ -13,12 +13,26 @@ html {
 }
 
 body {
+  cursor: none; /*standaard cursor weg*/
+
   font-family: "Alatsi", sans-serif;
   margin: 0px;
   background: black;
   display: flex;
   flex-direction: column;
   height: 3000px;
+}
+
+/* CURSOR */
+.cursor {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #e33fb1; /* Kleur van de cursor */
+  box-shadow: 0 0 30px 10px rgba(227, 63, 177, 0.5); /* Paars lichtschijnsel */
+  pointer-events: none;
+  transition: transform 0.1s ease-out; /* Soepele beweging van de cursor */
 }
 
 /* scrollbarr */
@@ -346,10 +360,15 @@ nav {
   font-weight: 800;
 }
 
+.about-me-pic-1, .about-me-pic-2 {
+  opacity: 0; /* Start onzichtbaar */
+  transition: opacity 1.5s ease-in-out; /* Vloeiende fade-in animatie */
+}
+
 .about-me-pic-1 {
   opacity: 0;
-  transform: translateY(50px); /* Begin positie buiten zicht */
-  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  transform: translateY(-50px); /* Begin positie voor pic 2 */
+  transition: transform 1.5s ease-in-out;
 
   margin-left: 34%;
   width: 400px;
@@ -364,7 +383,7 @@ nav {
 .about-me-pic-2 {
   opacity: 0;
   transform: translateY(50px); /* Begin positie buiten zicht */
-  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 
   margin-left: 45%;
   margin-top: 13%;
@@ -386,7 +405,14 @@ nav {
   transform: translateY(0); /* Beweeg naar de oorspronkelijke positie */
 }
 
+/* Wanneer in beeld, wordt de afbeelding zichtbaar */
+.fade-in {
+  opacity: 1;
+}
 
+.slide-in {
+  transform: translateY(0); /* Beweeg naar de normale positie */
+}
 
 .about-me-second-text-container {
   display: flex;
