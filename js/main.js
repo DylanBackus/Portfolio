@@ -15,7 +15,7 @@ for (var i = 0; i < numMetaballs; i++) {
     x: Math.random() * (width - 10 * radius) + radius,
     y: Math.random() * (height - 10 * radius) + radius,
     vx: (Math.random() - 1) * 0.4,
-    vy: (Math.random() - 1) * 0.7, //speed 1.2 for laptop // 
+    vy: (Math.random() - 1) * 0.6, //speed 1.2 for laptop // 
     r: radius * 1.2,
   });
 }
