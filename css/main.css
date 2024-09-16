@@ -312,6 +312,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .carousel-container .dots .dot {

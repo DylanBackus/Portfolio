@@ -10,12 +10,12 @@ var numMetaballs = 40; // aantal
 var metaballs = [];
 
 for (var i = 0; i < numMetaballs; i++) {
-  var radius = Math.random() * 80;
+  var radius = Math.random() * 60;
   metaballs.push({
-    x: Math.random() * (width - 10 * radius) + radius,
-    y: Math.random() * (height - 10 * radius) + radius,
+    x: Math.random() * (width - 2 * radius) + radius,
+    y: Math.random() * (height - 2 * radius) + radius,
     vx: (Math.random() - 1) * 0.4,
-    vy: (Math.random() - 1) * 0.6, //speed 1.2 for laptop // 
+    vy: (Math.random() - 1) * 0.4, //speed 1.2 for laptop // 
     r: radius * 1.2,
   });
 }
