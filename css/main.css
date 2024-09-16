@@ -14,7 +14,6 @@ html {
 
 body {
   cursor: none; /*standaard cursor weg*/
-  
 
   font-family: "Alatsi", sans-serif;
   margin: 0px;
@@ -31,11 +30,12 @@ body {
   margin-left: -18px;
   margin-top: -18px;
 
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
+  mix-blend-mode: exclusion;
 
   position: fixed;
   border-radius: 50%;
- background-color: #00eaff;
+  background-color: #00eaff;
   pointer-events: none;
   z-index: 1000;
 }
@@ -167,7 +167,7 @@ nav {
 }
 
 .section2 {
-  background-color: #020202;
+  background-color: #0c0c0c;
 
   display: flex;
   flex-direction: column;
@@ -329,6 +329,8 @@ nav {
 
 /*about*/
 .about-container {
+  margin-left: 120px;
+  
   width: 70%;
   height: 94%;
   background-color: #0000;
@@ -359,13 +361,14 @@ nav {
   font-family: sans-serif;
 
   color: #0000;
-  -webkit-text-stroke: .6px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.6px rgb(255, 255, 255);
   color: #0000;
   font-size: 170px;
   font-weight: 800;
 }
 
-.about-me-pic-1, .about-me-pic-2 {
+.about-me-pic-1,
+.about-me-pic-2 {
   opacity: 0; /* Start onzichtbaar */
   transition: opacity 1.5s ease-in-out; /* Vloeiende fade-in animatie */
 }
@@ -441,11 +444,11 @@ nav {
   color: white;
 }
 
-.about-me-roc-link{
+.about-me-roc-link {
   margin-bottom: 20px;
 
   text-decoration: none;
-  list-style-type: none;  
+  list-style-type: none;
 
   font-size: 18px;
   font-weight: 700;

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }, {
-      threshold: 0.5 // animatie begint wanneer 50% van de afbeelding zichtbaar is
+      threshold: .7 // animatie begint wanneer 50% van de afbeelding zichtbaar is
     });
   
     // start observer voor elke afbeelding
