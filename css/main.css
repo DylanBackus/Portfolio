@@ -13,7 +13,8 @@ html {
 }
 
 body {
-  cursor: none; /*standaard cursor weg*/
+  cursor: none;
+  /*standaard cursor weg*/
 
   font-family: "Alatsi", sans-serif;
   margin: 0px;
@@ -136,6 +137,7 @@ nav {
 
 .nav-item a:hover {
   font-weight: 700;
+  position: relative;
 }
 
 .nav-contact-container {
@@ -233,15 +235,18 @@ nav {
 }
 
 .carousel-container .carousel {
-  aspect-ratio: 1.7777777778;
   width: 100%;
+  height: 600px;
   position: relative;
   overflow: hidden;
 }
 
+.eerdere-projects-images {
+  width: 100%;
+}
+
 .carousel-container .carousel .item {
   opacity: 0;
-  width: 100%;
   height: 100%;
   display: none;
   transition: opacity 0.5s ease-in-out;
@@ -333,7 +338,7 @@ nav {
 /*about*/
 .about-container {
   margin-left: 120px;
-  
+
   width: 70%;
   height: 94%;
   background-color: #0000;
@@ -372,13 +377,16 @@ nav {
 
 .about-me-pic-1,
 .about-me-pic-2 {
-  opacity: 0; /* Start onzichtbaar */
-  transition: opacity 1.5s ease-in-out; /* Vloeiende fade-in animatie */
+  opacity: 0;
+  /* Start onzichtbaar */
+  transition: opacity 1.5s ease-in-out;
+  /* Vloeiende fade-in animatie */
 }
 
 .about-me-pic-1 {
-  opacity: 0;
-  transform: translateY(-50px); /* Begin positie voor pic 2 */
+  opacity: 1;
+  transform: translateY(-50px);
+  /* Begin positie voor pic 2 */
   transition: transform 1.5s ease-in-out;
 
   margin-left: 34%;
@@ -392,8 +400,9 @@ nav {
 }
 
 .about-me-pic-2 {
-  opacity: 0;
-  transform: translateY(50px); /* Begin positie buiten zicht */
+  opacity: 1;
+  transform: translateY(50px);
+  /* Begin positie buiten zicht */
   transition: transform 1.5s ease-in-out;
 
   margin-left: 45%;
@@ -408,12 +417,14 @@ nav {
 
 .about-me-pic-1.fade-in {
   opacity: 1;
-  transform: translateY(0); /* Beweeg naar de oorspronkelijke positie */
+  transform: translateY(0);
+  /* Beweeg naar de oorspronkelijke positie */
 }
 
 .about-me-pic-2.fade-in {
   opacity: 1;
-  transform: translateY(0); /* Beweeg naar de oorspronkelijke positie */
+  transform: translateY(0);
+  /* Beweeg naar de oorspronkelijke positie */
 }
 
 /* Wanneer in beeld, wordt de afbeelding zichtbaar */
@@ -422,7 +433,8 @@ nav {
 }
 
 .slide-in {
-  transform: translateY(0); /* Beweeg naar de normale positie */
+  transform: translateY(0);
+  /* Beweeg naar de normale positie */
 }
 
 .about-me-second-text-container {
