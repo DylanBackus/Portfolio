@@ -92,7 +92,7 @@ canvas {
 
 nav {
   position: fixed;
-  z-index: 2;
+  z-index: 100;
   margin-top: 0px;
   padding-top: 10px;
 
@@ -177,7 +177,7 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 1000px;
+  height: 800px;
   width: 100%;
 }
 
@@ -259,7 +259,18 @@ nav {
   object-position: center;
 }
 
-.carousel-container .carousel .item .caption {
+.carousel-container .carousel .item {
+  width: 100%;
+  padding: var(--lx-space-01);
+  position: absolute;
+  bottom: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+}
+
+.caption{
   width: 100%;
   padding: var(--lx-space-01);
   position: absolute;
