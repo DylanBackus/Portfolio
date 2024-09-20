@@ -74,6 +74,7 @@ body {
   mix-blend-mode: overlay;
   z-index: 2;
   opacity: 100%;
+  font-weight: 700;
   font-size: 25vw;
   color: white;
 }
@@ -174,11 +175,13 @@ nav {
   background-color: #0c0c0c;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   height: 800px;
   width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .section3 {
@@ -193,15 +196,66 @@ nav {
   /* red */
 }
 
-/* foto shit */
+/* My work */
 
-.past-projects-container {
+.my-work-container {
   display: flex;
   flex-direction: row;
   background: #0000;
-  /* magenta */
-  height: 700px;
-  width: 80%;
+  background: magenta;
+  height: 100%;
+  width: 8000px;
+}
+
+.my-work-projects-container-grey {
+  height: 100%;
+  width: 2500px;
+
+  background: #141414;
+}
+
+.left-text-container{
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 15px;
+  width: 375px;
+  height: 100%;
+  background-color: #0000;
+}
+
+.my-work-main-text{
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -5px;
+
+  color: #FFFF;
+}
+
+.my-work-dashboard-text{
+  font-size: 53px;
+  font-weight: 800;
+  letter-spacing: 0px;
+
+  margin-top: -40px;
+
+  color: #FFFF;
+}
+
+.my-work-third-text-al-1{
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 1.5px;
+
+  opacity: 80%;
+  color: #FFFF;
+}
+
+.my-work-projects-container-black {
+  height: 100%;
+  width: 1400px;
+
+  background: #000000;
 }
 
 /* scroll shit */
@@ -241,7 +295,34 @@ nav {
   overflow: hidden;
 }
 
-.eerdere-projects-images {
+.eerdere-projects-1 {
+  width: 100%;
+}
+
+.eerdere-projects-1 .item .active :hover {
+  transition-duration: 1s;
+  width: 100%;
+  display: none;
+}
+
+.eerdere-projects-1::after {
+  transition-duration: 1s;
+  width: 100%;
+  display: none;
+  content: "test test test";
+  color: white;
+}
+
+
+.eerdere-projects-2 {
+  width: 100%;
+}
+
+.eerdere-projects-3 {
+  width: 100%;
+}
+
+.eerdere-projects-4 {
   width: 100%;
 }
 
@@ -270,7 +351,7 @@ nav {
   color: white;
 }
 
-.caption{
+.caption {
   width: 100%;
   padding: var(--lx-space-01);
   position: absolute;

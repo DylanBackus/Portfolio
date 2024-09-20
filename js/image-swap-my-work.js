@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
           dots[idx].classList.add("active");
         }
       });
-    }, 5); // Duur van de transition
+    }, 10); // Duur van de transition
   }
 
-  startAutoSwap(); // Start automatic image swap
+  startAutoSwap(); // Start auto image swap
 
   function nextItem() {
     currentIndex = (currentIndex + 1) % items.length;
