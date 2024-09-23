@@ -21,7 +21,6 @@ body {
   background: black;
   display: flex;
   flex-direction: column;
-  height: 3000px;
 }
 
 /* CURSOR */
@@ -74,7 +73,7 @@ body {
   mix-blend-mode: overlay;
   z-index: 2;
   opacity: 100%;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 25vw;
   color: white;
 }
@@ -114,8 +113,6 @@ nav {
   background-color: #0000;
   position: relative;
 }
-
-
 
 .navigatie-container {
   display: flex;
@@ -178,7 +175,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 800px;
+  height: 95vh;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -190,7 +187,7 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 800px;
+  height: 120vh;
   width: 100%;
   background-color: #0000;
   /* red */
@@ -202,29 +199,47 @@ nav {
   display: flex;
   flex-direction: row;
   background: #0000;
-  background: magenta;
   height: 100%;
-  width: 8000px;
 }
 
 .my-work-projects-container-grey {
+  padding-left: 140px;
+
   height: 100%;
-  width: 2500px;
+  width: 1200px;
 
   background: #141414;
 }
 
-.left-text-container{
+.my-work-projects-container-black {
+  padding-left: 150px;
+
+  height: 100%;
+  width: 1200px;
+
+  background: #0000;
+}
+
+.my-work-projects-container-weerapp {
+  padding-left: 150px;
+
+  height: 100%;
+  width: 200px;
+
+  background: #0000;
+}
+
+.top-text-container {
   display: flex;
   flex-direction: column;
 
   margin-left: 15px;
-  width: 375px;
-  height: 100%;
+  width: 100%;
+  height: 150px;
   background-color: #0000;
 }
 
-.my-work-main-text{
+.my-work-main-text {
   font-size: 80px;
   font-weight: 800;
   letter-spacing: -5px;
@@ -232,23 +247,37 @@ nav {
   color: #FFFF;
 }
 
-.my-work-dashboard-text{
-  font-size: 53px;
-  font-weight: 800;
-  letter-spacing: 0px;
+.my-work-second-text {
+  margin-top: -20px;
 
-  margin-top: -40px;
+  font-size: 35px;
+  font-weight: 200;
+  letter-spacing: 0px;
 
   color: #FFFF;
 }
 
-.my-work-third-text-al-1{
-  font-size: 20px;
-  font-weight: lighter;
-  letter-spacing: 1.5px;
+.my-work-projects-images {
+  height: 65%;
+}
 
-  opacity: 80%;
-  color: #FFFF;
+.my-work-projects-images-weerapp-portrait {
+  height: 65%;
+  margin-right: 30px;
+ }
+
+.weerapp-images-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.my-work-projects-container-weerapp {
+  height: 100%;
+  width: 1500px;
+
+  background: #000000;
 }
 
 .my-work-projects-container-black {
@@ -286,13 +315,6 @@ nav {
   display: flex;
   flex-direction: column;
   gap: var(--lx-gap);
-}
-
-.carousel-container .carousel {
-  width: 100%;
-  height: 600px;
-  position: relative;
-  overflow: hidden;
 }
 
 .eerdere-projects-1 {
