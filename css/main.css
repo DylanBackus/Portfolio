@@ -94,7 +94,7 @@ nav {
   position: fixed;
   z-index: 100;
   margin-top: 0px;
-  padding-top: .7%;
+  padding-top: 0.7%;
 
   display: flex;
   flex-direction: row;
@@ -114,7 +114,7 @@ nav {
   position: relative;
 }
 
-.button-contact{
+.button-contact {
   width: 140px;
   height: 40px;
 
@@ -124,15 +124,14 @@ nav {
   list-style-type: none;
   opacity: 100%;
   color: white;
-  background: rgb(12,124,255);
-  background: linear-gradient(90deg, rgba(12,124,255,1) 0%, rgba(76,94,255,1) 45%, rgba(152,59,255,1) 61%, rgba(209,33,255,1) 100%);
+  background-color: rgb(230, 0, 255);
   font-family: sans-serif;
   font-weight: 100;
   border: none;
   border-radius: 40px;
 }
 
-.button-contact:hover{
+.button-contact:hover {
   width: 140px;
   height: 40px;
   font-size: 24px;
@@ -141,8 +140,14 @@ nav {
   list-style-type: none;
   opacity: 100%;
   color: white;
-  background: rgb(12,124,255);
-  background: linear-gradient(90deg, rgba(12,124,255,1) 0%, rgba(76,94,255,1) 45%, rgba(152,59,255,1) 61%, rgba(209,33,255,1) 100%);
+  background: rgb(12, 124, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 124, 255, 1) 0%,
+    rgba(76, 94, 255, 1) 45%,
+    rgba(152, 59, 255, 1) 61%,
+    rgba(209, 33, 255, 1) 100%
+  );
   font-family: sans-serif;
   font-weight: 400;
   border-radius: 40px;
@@ -190,7 +195,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 95vh;
+  height: 80vh;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -202,7 +207,7 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 120vh;
+  height: 100vh;
   width: 100%;
   background-color: #0000;
   /* red */
@@ -218,28 +223,28 @@ nav {
 }
 
 .my-work-projects-container-grey {
-  padding-left: 3.5%;
+  padding-left: 1.5%;
 
   height: 100%;
-  width: 1200px;
+  width: 53vw;
 
   background: #141414;
 }
 
 .my-work-projects-container-black {
-  padding-left: 3.5%;
+  padding-left: 1.5%;
 
   height: 100%;
-  width: 100%;
+  width: 70vw;
 
   background: #0000;
 }
 
 .my-work-projects-container-weerapp {
-  padding-left: 3.5%;
+  padding-left: 1.5%;
 
   height: 100%;
-  width: 40%;
+  width: 68vw;
 
   background: #0000;
 }
@@ -248,8 +253,10 @@ nav {
   display: flex;
   flex-direction: column;
 
+  margin-top: 3%;
+
   width: 100%;
-  height: 21%;
+  height: 18%;
   background-color: #0000;
 }
 
@@ -258,7 +265,7 @@ nav {
   font-weight: 800;
   letter-spacing: -5px;
 
-  color: #FFFF;
+  color: #ffff;
 }
 
 .my-work-second-text {
@@ -268,15 +275,15 @@ nav {
   font-weight: 200;
   letter-spacing: 0px;
 
-  color: #FFFF;
+  color: #ffff;
 }
 
 .my-work-projects-images {
-  height: 65%;
+  height: 70%;
 }
 
 .my-work-projects-images-weerapp-portrait {
-  height: 65%;
+  height: 70%;
   margin-right: 3%;
 }
 
@@ -341,7 +348,6 @@ nav {
   content: "test test test";
   color: white;
 }
-
 
 .eerdere-projects-2 {
   width: 100%;
@@ -478,7 +484,7 @@ nav {
   font-family: sans-serif;
 
   color: white;
-  font-size: 170px;
+  font-size: 1060%;
   font-weight: 800;
 }
 
@@ -492,22 +498,19 @@ nav {
   color: #0000;
   -webkit-text-stroke: 0.6px rgb(255, 255, 255);
   color: #0000;
-  font-size: 170px;
+  font-size: 1060%;
   font-weight: 800;
 }
 
 .about-me-pic-1,
 .about-me-pic-2 {
   opacity: 0;
-  /* Start onzichtbaar */
   transition: opacity 1.5s ease-in-out;
-  /* Vloeiende fade-in animatie */
 }
 
 .about-me-pic-1 {
   opacity: 1;
   transform: translateY(-50px);
-  /* Begin positie voor pic 2 */
   transition: transform 1.5s ease-in-out;
 
   margin-left: 34%;
@@ -523,7 +526,6 @@ nav {
 .about-me-pic-2 {
   opacity: 1;
   transform: translateY(50px);
-  /* Begin positie buiten zicht */
   transition: transform 1.5s ease-in-out;
 
   margin-left: 45%;
@@ -634,13 +636,38 @@ nav {
   cursor: pointer;
 }
 
-.modal-main-text{
-  font-size: 40px;
+.modal-main-text {
+  font-size: 60px;
   font-weight: 600;
   color: white;
 }
 
-.contact-input-name{
+.contact-input {
+  margin-bottom: 1%;
+  margin-left: 1%;
+
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  background-color: #151515;
+  border: none;
+}
+.contact-input:focus {
+  margin-bottom: 1%;
+  margin-left: 1%;
+
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  border-color: #0000;
+}
+
+.contact-input-message {
+  margin-bottom: 1%;
+  margin-left: 1%;
+
+  width: 60%;
+
   color: white;
   font-size: 30px;
   font-weight: 100;
@@ -648,8 +675,15 @@ nav {
   border: none;
 }
 
-.contact-lines{
+.contact-lines {
+  margin-left: 1%;
+  margin-bottom: 4%;
+
   height: 1px;
   width: 60%;
-  background: linear-gradient(90deg, rgba(23,194,255,1) 0%, rgba(210,166,255,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 194, 255, 1) 0%,
+    rgba(210, 166, 255, 1) 100%
+  );
 }
