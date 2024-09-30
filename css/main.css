@@ -350,13 +350,13 @@ nav {
   font-weight: 800;
 }
 
-.about-me-pic-1,
-.about-me-pic-2 {
+.about-me-pic-1-container,
+.about-me-pic-2-container {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
 }
 
-.about-me-pic-1 {
+.about-me-pic-1-container {
   opacity: 1;
   transform: translateY(-50px);
   transition: transform 1.5s ease-in-out;
@@ -371,12 +371,12 @@ nav {
   background-color: rgb(154, 154, 154);
 }
 
-.about-me-pic-2 {
+.about-me-pic-2-container {
   opacity: 1;
   transform: translateY(50px);
   transition: transform 1.5s ease-in-out;
 
-  margin-left: 45%;
+  margin-left: 46%;
   margin-top: 13%;
   width: 20%;
   height: 60%;
@@ -386,13 +386,23 @@ nav {
   background-color: rgb(183, 183, 183);
 }
 
-.about-me-pic-1.fade-in {
+.about-me-pic-1{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.about-me-pic-2{
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.about-me-pic-1-container.fade-in {
   opacity: 1;
   transform: translateY(0);
   /* Beweeg naar de oorspronkelijke positie */
 }
 
-.about-me-pic-2.fade-in {
+.about-me-pic-2-container.fade-in {
   opacity: 1;
   transform: translateY(0);
   /* Beweeg naar de oorspronkelijke positie */
