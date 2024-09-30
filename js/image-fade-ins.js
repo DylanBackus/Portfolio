@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Selecteer de afbeeldingen die ingefade moet worden
-    var images = document.querySelectorAll(".about-me-pic-1, .about-me-pic-2");
+    var images = document.querySelectorAll(".about-me-pic-1-container, .about-me-pic-2-container");
   
     // maken van IntersectionObserver
     var observer = new IntersectionObserver(function (entries, observer) {
