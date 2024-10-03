@@ -439,7 +439,7 @@ nav {
 .contact-main-container {
   background-color: #0000;
   height: 100%;
-  width: 40%;
+  width: 50%;
 }
 
 .contact-main-top {
@@ -454,14 +454,14 @@ nav {
 
 .contact-main-text {
   color: white;
-  font-size: 500%;
+  font-size: 415%;
   font-weight: 600;
 }
 
 .contact-second-text {
   color: white;
 
-  font-size: 130%;
+  font-size: 90%;
   font-weight: 200;
   letter-spacing: 10.4px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -502,5 +502,5 @@ nav {
   height: 1px;
   width: 30%;
 
-  margin-bottom: 2.5%;
+  margin-bottom: 1.5%;
 }
