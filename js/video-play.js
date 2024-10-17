@@ -1,19 +1,28 @@
-const videos = document.querySelectorAll("video")
+// const videos = document.querySelectorAll("video")
 
-videos.forEach(video => {
-  video.addEventListener("mouseover", function () {
-    this.play()
-  })
+// videos.forEach(video => {
+//   video.addEventListener("mouseover", function () {
+//     this.play()
+//   })
   
-  video.addEventListener("mouseout", function () {
-    this.pause()
-  })
+//   video.addEventListener("mouseout", function () {
+//     this.pause()
+//   })
   
-  video.addEventListener("touchstart", function () {
-    this.play()
-  })
+//   video.addEventListener("touchstart", function () {
+//     this.play()
+//   })
   
-  video.addEventListener("touchend", function () {
-    this.pause()
+//   video.addEventListener("touchend", function () {
+//     this.pause()
+//   })
+// })
+$(document).ready(function() {
+    $(".myvideos").on("mouseover", function(event) {
+      this.play();
+  
+    }).on('mouseout', function(event) {
+      this.pause();
+  
+    });
   })
-})
