@@ -212,7 +212,7 @@ nav {
   height: 100%;
 }
 
-.my-work-projects-container-grey {
+.my-work-projects-container-finance-dashboard {
   padding-left: 1.5%;
 
   height: 100%;
@@ -221,13 +221,29 @@ nav {
   background: #141414;
 }
 
-.my-work-projects-container-black {
+.my-work-projects-container-porsche {
   padding-left: 1.5%;
 
   height: 100%;
-  width: 64vw;
+  width: 52vw;
 
   background: #0000;
+}
+
+.my-work-projects-container-sushipoint {
+  padding-left: 1.5%;
+
+  height: 100%;
+  width: 50vw;
+
+  background: #141414;
+}
+
+.-images-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
 .my-work-projects-container-weerapp {
@@ -281,13 +297,6 @@ nav {
   flex-direction: row;
   height: 100%;
   width: 100%;
-}
-
-.my-work-projects-container-black {
-  height: 100%;
-  width: 40%;
-
-  background: #000000;
 }
 
 /*about*/
