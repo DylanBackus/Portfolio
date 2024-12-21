@@ -21,11 +21,9 @@ $(document).ready(function () {
 
   $(".video-porsche").hover(
     function () { // Mouse enter
-      console.log("Mouse enter - playing video");
       this.play();
     },
     function () { // Mouse leave
-      console.log("Mouse leave - pausing video");
       this.pause();
     }
   );
