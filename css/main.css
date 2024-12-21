@@ -239,8 +239,7 @@ nav {
 }
 
 .video-porsche {
-  width: 100%;
-  height: auto;
+  height: 55vh;
   cursor: pointer;
   object-fit: cover;
 }
