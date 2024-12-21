@@ -18,7 +18,6 @@
 //   })
 // })
 $(document).ready(function () {
-  console.log("Video hover script loaded");
 
   $(".video-porsche").hover(
     function () { // Mouse enter
