@@ -216,7 +216,7 @@ nav {
   padding-left: 1.5%;
 
   height: 100%;
-  width: 50vw;
+  width: 52vw;
 
   background: #141414;
 }
@@ -225,7 +225,7 @@ nav {
   padding-left: 1.5%;
 
   height: 100%;
-  width: 52vw;
+  width: 55vw;
 
   background: #0000;
 }
@@ -238,11 +238,18 @@ nav {
   font-size: 19px;
 }
 
+.video-porsche {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  object-fit: cover;
+}
+
 .my-work-projects-container-sushipoint {
   padding-left: 1.5%;
 
   height: 100%;
-  width: 50vw;
+  width: 52vw;
 
   background: #141414;
 }
@@ -258,7 +265,7 @@ nav {
   padding-left: 1.5%;
 
   height: 100%;
-  width: 62.5vw;
+  width: 66vw;
 
   background: #0000;
 }

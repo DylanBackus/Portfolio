@@ -17,12 +17,17 @@
 //     this.pause()
 //   })
 // })
-$(document).ready(function() {
-    $(".myvideos").on("mouseover", function(event) {
+$(document).ready(function () {
+  console.log("Video hover script loaded");
+
+  $(".video-porsche").hover(
+    function () { // Mouse enter
+      console.log("Mouse enter - playing video");
       this.play();
-  
-    }).on('mouseout', function(event) {
+    },
+    function () { // Mouse leave
+      console.log("Mouse leave - pausing video");
       this.pause();
-  
-    });
-  })
+    }
+  );
+});
